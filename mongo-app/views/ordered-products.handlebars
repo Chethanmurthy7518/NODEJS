@@ -1,0 +1,36 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Total Price</th>
+      <th scope="col">Ordered Quantity</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each orders}}
+      <tr>
+        <th scope="row">{{_id}}</th>
+        <td>{{pName}}</td>
+        <td>{{pDesc}}</td>
+        <td>{{tPrice}}</td>
+        <td>{{pQuan}}</td>
+
+        <td>
+          <form action="/products/edit-order/{{_id}}" method="GET">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </form>
+        </td>
+        <td><form action="/products/delete-order/{{_id}}" method="GET">
+            <button type="submit" class="btn btn-danger">  Delete</button>
+          </form>
+        </td>
+         
+      </tr>
+    {{/each}}
+       <a href="/products/logout"><button class="btn btn-danger" style="float: right;">Logout</button></a>
+  </tbody>
+</table>

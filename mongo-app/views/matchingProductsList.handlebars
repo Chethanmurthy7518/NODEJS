@@ -1,0 +1,75 @@
+<div class="container">
+  <br>  <br>  <br>  <br>
+  <h2 style="text-align: center;color:black">Searched Data From Products</h2>
+<table class="table">
+  <thead>
+    <hr>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">name</th>
+      <th scope="col">Description</th>
+      <th scope="col">price</th>
+      
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {{! HERE we are looping the array of obj PRODUCTS }}
+    {{#each matchingObj}}
+
+      <tr>
+        <th scope="row">{{_id}}</th>
+        <td>{{pName}}</td>
+        <td>{{pDesc}}</td>
+        <td>{{pPrice}}</td>
+        <td>
+          <form action="/products/edit-product/{{_id}}" method="GET">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </form>
+        </td>
+        <td><form action="/products/delete-product/{{_id}}" method="GET">
+            <button type="submit" class="btn btn-danger">  Delete</button>
+          </form>
+        </td>
+      </tr>
+
+    {{/each}}
+       <a href="/products/logout"><button class="btn btn-danger" style="float: right;">Logout</button></a>
+  </tbody>
+</table>
+</div>
+
+{{!-- <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each matchingObj}}
+      <tr>
+        <th scope="row">{{_id}}</th>
+        <td>{{pName}}</td>
+        <td>{{pDesc}}</td>
+        <td>{{pPrice}}</td>
+
+        <td>
+          <form action="/products/edit-product/{{_id}}" method="GET">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </form>
+        </td>
+        <td><form action="/products/delete-product/{{_id}}" method="GET">
+            <button type="submit" class="btn btn-danger">  Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+</table> --}}

@@ -27,8 +27,8 @@ readStream.on('error',(err)=>{
 
 })
 
-setTimeout(()=>{
-    const data= readStream.read(10000)
-    console.log("data",data);
+// setTimeout(()=>{
+//     const data= readStream.read(10000)
+//     console.log("data",data);
 
-},1000)
+// },1000)

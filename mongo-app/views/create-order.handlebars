@@ -1,0 +1,49 @@
+<div class="col-6 col-md-8 m-auto">
+  <form action="/products/create-order" method="POST">
+    <div class="form-group">
+      <label for="pid">ID</label>
+      <input
+        type="string"
+        name="_id"
+        class="form-control"
+        id="pid"
+        
+        
+        aria-describedby="pid"
+        placeholder="Product ID"
+      />
+    </div>
+
+    {{!-- <div class="form-group">
+      <label for="pname">Product To Order</label>
+      <input
+        type="text"
+        name="pName"
+        class="form-control"
+        id="pname"
+        value="{{selectedProduct.pName}}"
+        aria-describedby="pname"
+        placeholder="Product Name"
+      />
+    </div> --}}
+
+    <div class="form-group">
+      <label for="pdesc">Product Quantity</label>
+      <input
+        type="number"
+        name="pQuan"
+        class="form-control"
+        id="pquan"
+        
+
+        aria-describedby="pdesc"
+        placeholder="Product Description"
+      />
+    </div>
+
+   
+
+    <button type="Submit" class="btn btn-primary">Create Order</button>
+    <a href="/products/logout"><button class="btn btn-danger">Logout</button></a>
+  </form>
+</div>

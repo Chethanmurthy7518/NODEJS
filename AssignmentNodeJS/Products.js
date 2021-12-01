@@ -1,0 +1,1 @@
+const products = [{"id":1,"name":"bike","model":"Himalayan","price":2500000},{"id":"3","name":"Mobile","model":"Iphone13","price":"79999"}]; module.exports={products}
